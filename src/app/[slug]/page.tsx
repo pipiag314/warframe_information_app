@@ -40,7 +40,7 @@ const SingleWarframePage = async ({ params }: any) => {
               <div className="grid gap-5">
 
                 {warframe.abilities.map((ability, index) => (
-                  <div className="flex flex-col justify-start">
+                  <div key={ability.name} className="flex flex-col justify-start">
                     <h3 className="font-bold">{index+1}. {ability.name}</h3>
                     <p>{ability.description}</p>
                   </div>
